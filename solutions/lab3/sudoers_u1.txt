@@ -1,0 +1,1 @@
+u1 ALL=(root) /usr/bin/passwd [A-Za-z]*, !/usr/bin/passwd root

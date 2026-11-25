@@ -1,0 +1,96 @@
+=== Аудит безопасности (v3) ===
+Дата: Wed Nov 25 01:29:28 PM EST 2026
+Запущен от: root
+
+=== Пользователи (root и UID>=1000) ===
+- root
+  uid=0(root) gid=0(root) groups=0(root)
+  Last password change					: Sep 10, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+- nobody
+  uid=65534(nobody) gid=65534(nogroup) groups=65534(nogroup)
+  Last password change					: Sep 10, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+- icsi
+  uid=1000(icsi) gid=1000(icsi) groups=1000(icsi),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),100(users),101(netdev),103(bluetooth)
+  Last password change					: Sep 10, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+- student
+  uid=1001(student) gid=1001(student) groups=1001(student),27(sudo),100(users)
+  Last password change					: Nov 13, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+- bsa-1
+  uid=1002(bsa-1) gid=1002(bsa-1) groups=1002(bsa-1),27(sudo),100(users)
+  Last password change					: Nov 13, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+- u1
+  uid=1003(u1) gid=1003(u1) groups=1003(u1),1008(project)
+  Last password change					: Nov 25, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+- u2
+  uid=1004(u2) gid=1004(u2) groups=1004(u2),1008(project)
+  Last password change					: Nov 25, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+- u3
+  uid=1005(u3) gid=1005(u3) groups=1005(u3)
+  Last password change					: Nov 25, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+- u4
+  uid=1006(u4) gid=1006(u4) groups=1006(u4),1009(readers)
+  Last password change					: Nov 25, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+- u5
+  uid=1007(u5) gid=1007(u5) groups=1007(u5),1009(readers)
+  Last password change					: Nov 25, 2026
+  Minimum number of days between password change		: 0
+  Maximum number of days between password change		: 99999
+  Последний вход: lastlog2 не установлен
+
+=== Параметры sshd (эффективные) ===
+port 22
+logingracetime 30
+maxauthtries 2
+permitrootlogin yes
+pubkeyauthentication yes
+passwordauthentication yes
+
+=== Топ-5 процессов по памяти ===
+    PID    PPID USER     %MEM CMD
+   1456    1434 bsa-1    20.0 /home/bsa-1/.vscode-server/cli/servers/Stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1/server/node --dns-result-order=ipv4first /home/bsa-1/.vscode-server/cli/servers/Stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+   1517    1473 bsa-1     7.2 /home/bsa-1/.vscode-server/cli/servers/Stable-661626d0e72f97806550790a98fb87116c9db825/server/node /home/bsa-1/.vscode-server/cli/servers/Stable-661626d0e72f97806550790a98fb87116c9db825/server/out/bootstrap-fork --type=agentHost --logsPath /home/bsa-1/.vscode-server/data/logs/20261125T113117 --user-data-dir /home/bsa-1/.vscode-server/data --telemetry-level all
+   1434    1430 bsa-1     5.2 /home/bsa-1/.vscode-server/cli/servers/Stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1/server/node /home/bsa-1/.vscode-server/cli/servers/Stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --agent-host-bridge-port=45979 --agent-host-bridge-host=127.0.0.1 --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-1083d65f-a437-472c-99b8-efc74e8d1f7b
+   1473    1463 bsa-1     4.9 /home/bsa-1/.vscode-server/cli/servers/Stable-661626d0e72f97806550790a98fb87116c9db825/server/node /home/bsa-1/.vscode-server/cli/servers/Stable-661626d0e72f97806550790a98fb87116c9db825/server/out/server-main.js --socket-path /tmp/code-d7e879b0-6c28-4a8d-a75d-9e8bebfcae33 --agent-host-path /tmp/code-58811408-2cd2-45a0-b855-7bfeebbdc3ad --start-server --accept-server-license-terms --enable-remote-auto-shutdown --without-connection-token
+   1488    1434 bsa-1     3.9 /home/bsa-1/.vscode-server/cli/servers/Stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1/server/node /home/bsa-1/.vscode-server/cli/servers/Stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1/server/out/bootstrap-fork --type=ptyHost --logsPath /home/bsa-1/.vscode-server/data/logs/20261125T113116
+
+=== Подозрительные учётные записи ===
+UID 0 кроме root:
+Пустой пароль:
+
+=== Файлы с SUID ===
+/usr/bin/gpasswd
+/usr/bin/chfn
+/usr/bin/passwd
+/usr/bin/umount
+/usr/bin/newgrp
+/usr/bin/mount
+/usr/bin/chsh
+/usr/bin/sudo
+/usr/bin/su
